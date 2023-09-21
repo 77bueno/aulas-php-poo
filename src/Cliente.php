@@ -9,6 +9,6 @@ class Cliente {
 
     // Métodos (ou comportamentos)
     public function exibirDados():void {
-
+        
     }
 }
