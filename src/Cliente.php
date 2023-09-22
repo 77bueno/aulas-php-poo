@@ -11,4 +11,7 @@ class Cliente {
         $this->nome = $valorDoNome;
     }
 
+    public function getNome():string {
+        return $this->nome; 
+    }
 }
