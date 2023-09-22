@@ -16,10 +16,15 @@
 
 <?php
 require_once "src/Cliente.php";
-$clienteA = new Cliente("Ciclano", "ciclano@gmaiu");
-$clienteB = new Cliente("Clereton Savio", "teto@gmail");
+$clienteA = new Cliente;
+
+// O código abaixo dará erro pela propriedade privada!
+// $clienteA->nome = "Thiago";
+
+// Usando o setter para atribuir um valor à propriedade privada "nome"
+$clienteA->setNome("Fulano da Silva");
 ?>
 
-<pre> <?=var_dump($clienteA, $clienteB)?> </pre>
+<pre> <?=var_dump($clienteA)?> </pre>
 </body>
 </html>
