@@ -34,6 +34,7 @@ $clientePJ->setNomeFantasia("Aninha");
 ?>
 
 <pre> <?=var_dump($clientePJ)?> </pre> 
+<hr>
 <pre> <?=var_dump($clientePF)?> </pre> 
 </body>
 </html>
