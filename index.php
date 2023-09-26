@@ -15,9 +15,25 @@
 
 <?php 
 require_once "src/PessoaFisica.php";
+require_once "src/PessoaJuridica.php";
+
 $clientePF = new PessoaFisica;
+$clientePJ = new PessoaJuridica;
+
+$clientePF->setNome("Isaque Mota");
+$clientePF->setEmail("isaquem@gmail.com");
+$clientePF->setIdade(9);
+$clientePF->setCpf("123.456.789-0");
+
+
+$clientePJ->setNome("Ana Mota");
+$clientePJ->setEmail("anamota@gmail.com");
+$clientePJ->setAnoFundacao(2000);
+$clientePJ->setCnpj("32.088.0001/000.41");
+$clientePJ->setNomeFantasia("Aninha");
 ?>
 
-<pre> <?=var_dump($clientePF)?> </pre>
+<pre> <?=var_dump($clientePJ)?> </pre> 
+<pre> <?=var_dump($clientePF)?> </pre> 
 </body>
 </html>

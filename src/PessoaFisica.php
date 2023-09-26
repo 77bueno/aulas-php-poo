@@ -3,7 +3,7 @@ require_once "Cliente.php";
 
 class PessoaFisica extends Cliente {
     private int $idade;
-    private int $cpf;
+    private string $cpf;
 
     
     public function getIdade(): int
@@ -18,12 +18,12 @@ class PessoaFisica extends Cliente {
         return $this;
     }
 
-    public function getCpf(): int
+    public function getCpf(): string
     {
         return $this->cpf;
     }
 
-    public function setCpf(int $cpf): self
+    public function setCpf(string $cpf): self
     {
         $this->cpf = $cpf;
 
