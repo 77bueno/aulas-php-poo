@@ -62,6 +62,7 @@ var_dump($clienteMei);
 require_once "src/Cliente.php";
 $clienteGenerico = new Cliente;
 ?>
+<hr>
 <pre><?=var_dump($clienteGenerico)?></pre>
 </body>
 </html>
