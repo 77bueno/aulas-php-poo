@@ -11,6 +11,9 @@
     <h2>Assuntos abordados:</h2>
     <ul>
         <li>Herança (Super Classe e Sub Classe)</li>
+        <li>Métodos/propriedades protegidos (acessíveis apenas pela classe em que foram definidos e pelas subclasses)</li>
+        <li>Classe Abstrata</li>
+        <li>Classe Final</li>
     </ul>
 
 <?php 
@@ -36,5 +39,15 @@ $clientePJ->setNomeFantasia("Aninha");
 <pre> <?=var_dump($clientePJ)?> </pre> 
 <hr>
 <pre> <?=var_dump($clientePF)?> </pre> 
+
+
+<hr>
+
+
+<?php 
+require_once "src/Cliente.php";
+$clienteGenerico = new Cliente;
+?>
+<pre><?=var_dump($clienteGenerico)?></pre>
 </body>
 </html>
