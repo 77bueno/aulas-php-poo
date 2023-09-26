@@ -1,5 +1,7 @@
 <?php
-class PessoaFisica {
+require_once "Cliente.php";
+
+class PessoaFisica extends Cliente {
     private int $idade;
     private int $cpf;
 
