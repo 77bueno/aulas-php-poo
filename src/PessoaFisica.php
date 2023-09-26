@@ -8,7 +8,6 @@ class PessoaFisica extends Cliente {
     public function __construct() {
         $this->setSituacao("normal");
     }
-    
 
     public function getIdade(): int
     {
