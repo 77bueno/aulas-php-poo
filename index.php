@@ -37,10 +37,9 @@ $clientePJ->setNomeFantasia("Aninha");
 <hr>
 <pre> <?=var_dump($clientePF)?> </pre> 
 
-
 <hr>
 
-<h2>Saída de dados: </h2>
+<h2>Saída de dados</h2>
 
 <section> <?=$clientePF->exibirDados()?> </section>
 <section> <?=$clientePJ->exibirDados()?> </section>
