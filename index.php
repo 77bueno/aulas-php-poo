@@ -3,47 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 7</title>
+    <title>Exemplo 8</title>
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 7</h1>
+    <h1>PHP com POO - Exemplo 8</h1>
     <hr>
     <h2>Assuntos abordados:</h2>
     <ul>
-        <li>Polimorfismo</li>
-        <li>Sobreposição de métodos</li>
-        <li>Uso do <code>parent</code> para acessar a superclasse</li>
+        <li>Propriedades e métodos estáticos</li>
+        <li>Acesso direto sem necessidade de objetos/instâncias</li>
+        <li>Uso do <code>self</code> para acesso (dentro da classe) aos recursos estáticos</li>
     </ul>
 
 <?php 
 require_once "src/PessoaFisica.php";
-require_once "src/PessoaJuridica.php";
 
-$clientePF = new PessoaFisica;
-$clientePJ = new PessoaJuridica;
+$cliente1 = new PessoaFisica;
+$cliente1->setNome("Tiago Santos");
+$cliente1->setIdade(89);
 
-$clientePF->setNome("Isaque Mota");
-$clientePF->setEmail("isaquem@gmail.com");
-$clientePF->setIdade(9);
-$clientePF->setCpf("123.456.789-0");
+$cliente2 = new PessoaFisica;
+$cliente2->setNome("Klaibert");
+$cliente2->setIdade(52);
 
 
-$clientePJ->setNome("Ana Mota");
-$clientePJ->setEmail("anamota@gmail.com");
-$clientePJ->setAnoFundacao(2000);
-$clientePJ->setCnpj("32.088.0001/000.41");
-$clientePJ->setNomeFantasia("Aninha");
+// Usando os recursos estáticos
+require_once "src/Utilitarios.php";
+Utilitarios::obterData();
 ?>
 
-<pre> <?=var_dump($clientePJ)?> </pre> 
-<hr>
-<pre> <?=var_dump($clientePF)?> </pre> 
+<h2>Atendimentos do dia: <?=Utilitarios::$dataAtual?> </h2>
 
-<hr>
+<h3>Cliente: <?=$cliente1->getNome()?></h3>
+<p>Tipo de Atendimento: 
+    <?=Utilitarios::definirAtendimento( $cliente1->getIdade() )?>
+</p>
 
-<h2>Saída de dados</h2>
-
-<section> <?=$clientePF->exibirDados()?> </section>
-<section> <?=$clientePJ->exibirDados()?> </section>
+<h3>Cliente: <?=$cliente2->getNome()?></h3>
+<p>Tipo de Atendimento: 
+    <?=Utilitarios::definirAtendimento( $cliente2->getIdade() )?>
+</p>
 </body>
 </html>
