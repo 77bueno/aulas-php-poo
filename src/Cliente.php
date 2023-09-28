@@ -10,6 +10,14 @@ abstract class Cliente {
     private string $email;
     private string $senha;
     private string $situacao = "A definir";
+
+    public function exibirDados():void {
+        echo "<h3>Método exibirDados - Classe Cliente</h3>";
+        echo "<h4> $this->nome </h4>"; // ou
+        echo "<h4> ".$this->getNome()." </h4>";
+
+        echo "<p>Situação: $this->situacao </p>";
+    }
     
     // Métodos getters e setters
     public function setNome(string $valorDoNome):void {
