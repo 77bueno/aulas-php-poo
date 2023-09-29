@@ -35,7 +35,7 @@
 <?php
 use Fornecedor\Pagamento as FornecedorPagamento;
 use Prestador\Pagamento;
-use Tabajara\{MEI, PessoaFisica as PF, PessoaJuridica as PJ};
+use Tabajara\{Escola, MEI, PessoaFisica as PF, PessoaJuridica as PJ};
 
 require_once "vendor/autoload.php";
 $pagamentoFornecedor = new FornecedorPagamento;
@@ -98,5 +98,15 @@ $MEI->setNomeFantasia("Dr. Samuel")
         <p><b>Apelido:</b> <?=$MEI->getNomeFantasia()?></p>
     </article>
 </section>
+
+
+
+<hr>
+
+
+<?php 
+$escola = new Escola;
+var_dump($escola)
+?>
 </body>
 </html>
