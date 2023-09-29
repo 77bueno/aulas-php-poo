@@ -22,8 +22,16 @@ já dá erro no servidor devido a terem o mesmo nome */
 require_once "src/fornecedores/Pagamento.php";
 require_once "src/prestadores/Pagamento.php";
 
-$pagamentoFornecedor = new Fornecedor\Pagamento;
-$pagamentoPrestador = new Prestador\Pagamento;
+// Forma 1: De usar classes com namespaces
+// $pagamentoFornecedor = new Fornecedor\Pagamento;
+// $pagamentoPrestador = new Prestador\Pagamento;
+
+// Forma 2: De usar classes com namespaces
+use Fornecedor\Pagamento;
+use Prestador\Pagamento as PrestadorPagamento; // ALIAS (APELELIDO)
+
+$pagamentoFornecedor = new Pagamento;
+$pagamentoPrestador = new PrestadorPagamento;
 ?>
 
 <pre><?=var_dump($pagamentoFornecedor)?></pre>
