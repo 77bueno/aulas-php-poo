@@ -16,10 +16,18 @@
     </ul>
 
 <?php
+/* Só de fazer o require/importação das classes (SEM NAMESPACE),
+já dá erro no servidor devido a terem o mesmo nome */
+
 require_once "src/fornecedores/Pagamento.php";
 require_once "src/prestadores/Pagamento.php";
+
+$pagamentoFornecedor = new Fornecedor\Pagamento;
+$pagamentoPrestador = new Prestador\Pagamento;
 ?>
 
+<pre><?=var_dump($pagamentoFornecedor)?></pre>
+<pre><?=var_dump($pagamentoPrestador)?></pre>
 
 </body>
 </html>
