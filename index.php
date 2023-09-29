@@ -45,7 +45,7 @@ use Prestador\Pagamento;
 //use Tabajara\PessoaJuridica;
 
 // Use com uma lista de classes
-use Tabajara\{MEI, PessoaFisica, PessoaJuridica};
+use Tabajara\{MEI, PessoaFisica as PF, PessoaJuridica as PJ};
 
 require_once "src/fornecedores/Pagamento.php";
 require_once "src/prestadores/Pagamento.php";
@@ -75,8 +75,8 @@ $pagamentoPrestador = new Pagamento;
 <hr>
 
 <?php 
-$clientePJ = new PessoaJuridica;
-$clientePF = new PessoaFisica;
+$clientePJ = new PJ;
+$clientePF = new PF;
 $MEI = new MEI;
 
 $clientePJ->setNome("Deborah Lucia");
