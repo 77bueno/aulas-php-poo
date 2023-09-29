@@ -37,12 +37,7 @@ use Fornecedor\Pagamento as FornecedorPagamento;
 use Prestador\Pagamento;
 use Tabajara\{MEI, PessoaFisica as PF, PessoaJuridica as PJ};
 
-require_once "src/fornecedores/Pagamento.php";
-require_once "src/prestadores/Pagamento.php";
-require_once "src/MEI.php";
-require_once "src/PessoaFisica.php";
-require_once "src/PessoaJuridica.php";
-
+require_once "vendor/autoload.php";
 $pagamentoFornecedor = new FornecedorPagamento;
 $pagamentoPrestador = new Pagamento;
 ?>
