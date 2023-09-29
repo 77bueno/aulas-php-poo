@@ -1,14 +1,13 @@
 <?php
 require_once "Cliente.php";
-
 class PessoaFisica extends Cliente {
     private int $idade;
     private string $cpf;
 
-    public function __construct() {
+    public function __construct(){
         $this->setSituacao("normal");
     }
-
+    
     public function getIdade(): int
     {
         return $this->idade;
@@ -32,5 +31,4 @@ class PessoaFisica extends Cliente {
 
         return $this;
     }
-
 }
